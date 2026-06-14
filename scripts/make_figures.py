@@ -2,20 +2,6 @@
 """
 make_figures.py -- builds the paper's full visual result set from results/.
 
-  fig1_cost_vs_scale.pdf   $/1M safe queries vs traffic; API floors,
-                           self-host curves per GPU, crossover markers
-  fig2_saturation.pdf      req/s and p95 E2EL vs concurrency, per cell
-                           (the evidence behind every qps_per_replica)
-  fig3_energy.pdf          J/token at saturation per GPU x model;
-                           secondary axis: safe queries per kWh
-  fig4_pareto.pdf          detection F1 vs $/1M safe queries (log x);
-                           the quality-cost frontier, one point per
-                           mechanism x cheapest-feasible-GPU
-  table_feasibility.csv    mechanism x GPU: qps/replica, SLO pass,
-                           crossover qps, fits-in-VRAM
-
-PDF output (vector) per *ACL camera-ready norms; PNG fallback alongside.
-Single-column friendly: each figure legible at 3.3in width.
 """
 import json, glob, math
 from pathlib import Path
