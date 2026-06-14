@@ -17,9 +17,6 @@ Output columns (TSV): label <TAB> prompt
 A sidecar prompts_provenance.tsv keeps: label, source, source_id, prompt
 so reviewers can trace every item.
 
-Default mix (200 total) is balanced for statistical signal per bucket
-without overspending the 20-min latency budget:
-  benign 60, borderline_safe 50, borderline_unsafe 40, harmful 50
 """
 import argparse, csv, json, random, hashlib
 from pathlib import Path
