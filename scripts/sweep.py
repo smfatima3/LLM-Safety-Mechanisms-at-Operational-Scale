@@ -19,14 +19,6 @@ full metric set the three literatures we surveyed agree on:
   CONTEXT (constants, not measured here):
     gpu_price_usd_hr   from the user's provider screenshot
     vram_gb, fits      memory-ceiling feasibility flag
-
-Output: one JSON line per concurrency rung -> results/{gpu}_{model}.jsonl
-The aggregated per-cell summary plugs directly into pilot_cost_model.py
-(replacing the seeded qps_per_replica / latency_s constants).
-
-This is written to run ON the GPU box. It degrades gracefully: if vLLM
-or a GPU is absent it can run against any OpenAI-compatible endpoint,
-and energy logging no-ops if NVML is unavailable (logged as null).
 """
 
 import argparse, asyncio, json, os, time, statistics, threading
