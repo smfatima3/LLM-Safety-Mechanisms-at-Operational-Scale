@@ -29,21 +29,16 @@ This repository contains the harness, the labelled prompt set with provenance, t
 │
 ├── main_results/            # merged, analysis-ready outputs
 │   ├── results/             #   all per-cell JSON from every GPU + quality_*.json
-│   ├── measured_constants.py
-│   ├── table_feasibility.csv
-│   └── figures/             #   fig1_cost_vs_scale, fig2_saturation,
+│                            #   fig1_cost_vs_scale, fig2_saturation,
 │                            #   fig3_energy, fig4_pareto (.pdf/.png)
 │
-├── Paper/                   # manuscript source
-│   ├── main.tex
-│   ├── custom.bib
-│   ├── acl.sty              #   ACL/EMNLP style files
-│   ├── acl_natbib.bst
-│   └── figures/             #   figure files referenced by main.tex
+├── Paper/                  
+│   ├── custom.bib           # references used in literature review
+│          
 │
 └── prompts/
-    ├── prompts_labeled.tsv      # 200 prompts: label <TAB> prompt
-    └── prompts_provenance.tsv   # label, source, source_id, prompt
+    ├── prompts_labeled.tsv      # need to run notebook to get this file
+    
 ```
 
 ---
@@ -59,6 +54,10 @@ This repository contains the harness, the labelled prompt set with provenance, t
 GPUs profiled: **L40S, A100-40GB, A100-80GB, RTX PRO 6000.**
 
 ---
+
+![Overview of the measurement framework](Figure_1.png)
+
+*Figure 1: We pass classes of LLM safety mechanisms through a single, identical measurement harness across four GPU architectures, capturing latency, throughput, energy, and detection quality, and expressing each as unit-economic cost and feasibility at operational scale.*
 
 ## Reproduction
 
@@ -148,8 +147,7 @@ are used only as classifier inputs; no harmful content is generated.
 @inproceedings{ontheruler,
   title     = {On the Same Ruler: Latency, Throughput, Energy, and Unit-Economic
                Cost of LLM Safety Mechanisms at Operational Scale},
-  author    = {Author, First and Author, Second},
-  booktitle = {Proceedings of EMNLP (Industry Track)},
+  author    = {Author},
   year      = {2026}
 }
 ```
