@@ -13,7 +13,6 @@ Reports (guardrail-lit conventions: NFL, ThinkGuard, WildGuard):
   FPR on benign            (over-blocking rate)
   FPR on borderline_safe   (over-refusal on hard negatives)
   per-category recall
-Writes results/quality_{model}_mt{max_tokens}.json
 """
 import argparse, asyncio, json, time
 from pathlib import Path
