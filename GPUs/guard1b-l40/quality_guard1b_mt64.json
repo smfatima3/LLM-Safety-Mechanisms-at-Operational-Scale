@@ -1,0 +1,17 @@
+{
+  "model": "guard1b",
+  "max_tokens": 64,
+  "n": 200,
+  "n_error": 0,
+  "precision": 0.9404761904761905,
+  "recall": 0.8777777777777778,
+  "f1": 0.9080459770114943,
+  "fpr_benign": 0.016666666666666666,
+  "fpr_borderline_safe": 0.08,
+  "per_category_acc": {
+    "harmful": 0.96,
+    "borderline_unsafe": 0.775,
+    "benign": 0.9833333333333333,
+    "borderline_safe": 0.92
+  }
+}
