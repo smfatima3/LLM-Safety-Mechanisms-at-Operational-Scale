@@ -5,10 +5,6 @@ Question this answers: do the four LLM-safety mechanism CLASSES separate
 enough in $/1M-safe-queries to be worth a full study, and does a real
 self-host-vs-API crossover exist at a realistic traffic scale?
 
-This is NOT measurement. Every number below is seeded from the literature
-we verified (sources noted inline). The real load-test harness replaces
-these constants with measured values; the MODEL stays identical.
-
 Two cost regimes:
   API        : cost is per-token, flat in volume.   cost/query = tok*price
   SELF-HOST  : cost is $/GPU-hour. cost/query falls as volume rises
